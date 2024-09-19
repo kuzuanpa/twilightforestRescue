@@ -69,7 +69,9 @@ public class MapGenTFHollowTree extends MapGenBase {
         int mapZ = (chunkZ << 4) + 8;
         boolean flag = false;
 
-        for (StructureStart structurestart : this.structureMap.values()) {
+        List<StructureStart> structures = new ArrayList<>(this.structureMap.values());
+
+        for (StructureStart structurestart : structures) {
             if (structurestart.isSizeableStructure()
                     && structurestart.getBoundingBox().intersectsWith(mapX, mapZ, mapX + 15, mapZ + 15)) {
                 structurestart

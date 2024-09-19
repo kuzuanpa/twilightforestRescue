@@ -302,12 +302,12 @@ public class BlockTFPortal extends BlockBreakable {
                                 true,
                                 TwilightForestMod.dimensionID);
                     } else {
-                        // System.out.println("Player touched the portal block. Sending the player to dimension 0");
-                        // playerMP.travelToDimension(0);
+                        // System.out.println("Player touched the portal block. Sending the player to dimension 11");
+                        // playerMP.travelToDimension(11);
                         playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(
                                 playerMP,
-                                0,
-                                new TFTeleporter(playerMP.mcServer.worldServerForDimension(0)));
+                                11,
+                                new TFTeleporter(playerMP.mcServer.worldServerForDimension(11)));
                         // playerMP.addExperienceLevel(0);
                     }
                 }
@@ -315,7 +315,7 @@ public class BlockTFPortal extends BlockBreakable {
                 if (entity.dimension != TwilightForestMod.dimensionID) {
                     // sendEntityToDimension(entity, TwilightForestMod.dimensionID);
                 } else {
-                    sendEntityToDimension(entity, 0);
+                    sendEntityToDimension(entity, 11);
                 }
             }
         }

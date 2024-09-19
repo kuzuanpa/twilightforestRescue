@@ -84,7 +84,7 @@ public class TFTeleporter extends Teleporter {
             int dx = x + (rand.nextInt(range) - rand.nextInt(range));
             int dz = z + (rand.nextInt(range) - rand.nextInt(range));
             if (isSafeBiomeAt(dx, dz, entity)) {
-                return new ChunkCoordinates(dx, 100, dz);
+                return new ChunkCoordinates(dx, 140, dz);
             }
         }
         return null;
@@ -201,7 +201,7 @@ public class TFTeleporter extends Teleporter {
         FMLLog.info("[TwilightForest] Did not even find an okay portal spot, just making a random one");
 
         // adjust the portal height based on what world we're traveling to
-        double yFactor = myWorld.provider.dimensionId == 0 ? 2 : 0.5;
+        double yFactor = myWorld.provider.dimensionId == 11 ? 4 : 0.5;
         // modified copy of base Teleporter method:
         int entityX = MathHelper.floor_double(entity.posX);
         int entityY = MathHelper.floor_double(entity.posY * yFactor);
@@ -214,7 +214,7 @@ public class TFTeleporter extends Teleporter {
 
     public ChunkCoordinates findPortalCoords(Entity entity, boolean ideal) {
         // adjust the portal height based on what world we're traveling to
-        double yFactor = myWorld.provider.dimensionId == 0 ? 2 : 0.5;
+        double yFactor = myWorld.provider.dimensionId == 11 ? 4 : 0.5;
         // modified copy of base Teleporter method:
         int entityX = MathHelper.floor_double(entity.posX);
         int entityZ = MathHelper.floor_double(entity.posZ);
