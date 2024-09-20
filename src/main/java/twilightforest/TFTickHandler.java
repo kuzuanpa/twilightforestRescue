@@ -168,7 +168,7 @@ public class TFTickHandler {
 
         @Override
         public void onUpdate() {
-            if (!this.worldObj.isRemote && this.ticksExisted % 20 == 0) if (this.worldObj.provider.dimensionId == 0
+            if (!this.worldObj.isRemote && this.ticksExisted % 20 == 0) if (this.worldObj.provider.dimensionId == 11
                     || this.worldObj.provider.dimensionId == TwilightForestMod.dimensionID
                     || TwilightForestMod.allowPortalsInOtherDimensions) {
                         if (this.worldObj.isMaterialInBB(this.boundingBox, Material.water)) {
