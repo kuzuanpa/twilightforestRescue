@@ -11,6 +11,8 @@ GTNH Modifications Copyright (c) 2021-2024 The GTNH Team.
 
 Textures include textures from [Team Twilight](https://github.com/TeamTwilight/twilightforest/blob/1.20.x/ASSET_LICENSE) under Attribution-NonCommercial-ShareAlike 4.0 International 
 
+Any sounds taken from [Team Twilight](https://github.com/TeamTwilight/twilightforest) are **All Rights Reserved**
+
 This code is licensed LGPL v2.1 or later. Feel free to use our changes, just
 give back any changes you make to the community as well!
 
