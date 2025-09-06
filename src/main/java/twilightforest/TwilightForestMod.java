@@ -31,6 +31,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import twilightforest.biomes.TFBiomeBase;
 import twilightforest.block.TFBlocks;
+import twilightforest.compat.Mods;
 import twilightforest.entity.TFCreatures;
 import twilightforest.integration.TFBaublesIntegration;
 import twilightforest.integration.TFNeiIntegration;
@@ -255,15 +256,15 @@ public class TwilightForestMod {
         new StructureTFMajorFeatureStart();
 
         // check if various integrations are required
-        isSkinportLoaded = Loader.isModLoaded("skinport");
-        isNeiLoaded = Loader.isModLoaded("NotEnoughItems");
-        if (Loader.isModLoaded("Baubles")) {
+        isSkinportLoaded = Mods.skinport.isLoaded();
+        isNeiLoaded = Mods.NEI.isLoaded();
+        if (Mods.baubles.isLoaded()) {
             areBaublesLoaded = BaubleType.values().length > 3;
         } else {
             areBaublesLoaded = false;
         }
-        isGTNHLoaded = Loader.isModLoaded("dreamcraft");
-        if (Loader.isModLoaded("endlessids")) {
+        isGTNHLoaded = Mods.GTNH.isLoaded();
+        if (Mods.endlessids.isLoaded()) {
             maxBiomeIDs = 65536;
         }
 
